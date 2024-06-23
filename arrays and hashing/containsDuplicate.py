@@ -26,9 +26,13 @@ from typing import List
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
         sorted_numbers=sorted(nums)
+        print(sorted_numbers)
         for i in range(len(sorted_numbers) - 1):
             if sorted_numbers[i] == sorted_numbers[i + 1]:
                 return True
         if len(sorted_numbers) > 1 and sorted_numbers[-2] == sorted_numbers[-1]:
             return True
         return False
+
+s=Solution()
+print(s.containsDuplicate([1,2,3,1]))
